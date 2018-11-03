@@ -23,9 +23,9 @@ app.get('/', function(request, response) {
 app.listen(process.env.PORT);    
 bot.start();
 
-// setInterval(function() {
-//   //setInterval(() => {
-//   axios.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`).then(
-//     res => console.log(res.data)
-//   );
-// },250000);
+setInterval(function() {
+  //setInterval(() => {
+  axios.get(process.env.PING).then(
+    res => console.log(res.data)
+  );
+},1000 * 60);
