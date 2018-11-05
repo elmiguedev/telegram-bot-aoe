@@ -5,6 +5,7 @@ const axios = require('axios');
 const Telebot = require('telebot');
 const bot = new Telebot(process.env.TOKEN);
 const audios = require('./audios.json');
+const responses = require('./responses');
 
 const tauntsCount = 42;
 
@@ -22,6 +23,9 @@ for(let i = 0; i <= tauntsCount; i++) {
   bot.on(`/a${i+1}e`,function(msg) {
     return bot.sendVoice(msg.chat.id, `./audios/english/${i+1}.opus`);
   }); 
+  bot.on('/help', function(msg){
+    return bot.sendMessage(msg.chat.id,responses.help);
+  });
  
 }
 
