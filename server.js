@@ -29,10 +29,19 @@ bot.on('/taunts', function(msg){
   return msg.reply.text(responses.taunts);
 });
 
+// easter egs!!!
+
+bot.on('/miami', function(msg){
+  return bot.sendVoice(msg.chat.id, `./audios/eggs/miami.opus`);
+});
+
+// express 
+
 app.get('/', function(request, response) {
     response.send('aoe bot :D');
 });
   
+
 app.listen(process.env.PORT);    
 bot.start();
 
