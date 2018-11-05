@@ -32,7 +32,7 @@ bot.on('/taunts', function(msg){
 // easter egs!!!
 
 bot.on('/miami', function(msg){
-  return bot.sendVoice(msg.chat.id, `./audios/eggs/miami.opus`);
+  return bot.sendVoice(msg.chat.id, `./audios/eggs/miami.opus`).then(() => bot.sendPhoto(msg.chat.id,`./audios/eggs/miami.gif`));
 });
 
 // express 
