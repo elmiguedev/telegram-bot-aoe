@@ -1,4 +1,4 @@
-const helptext = `
+const taunts = `
 1	Yes.
 2	No.
 3	Food please.
@@ -44,5 +44,5 @@ const helptext = `
 `;
 
 module.exports = {
-    help: helptext
+    taunts: taunts
 };

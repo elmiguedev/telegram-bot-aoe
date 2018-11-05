@@ -22,12 +22,12 @@ for(let i = 0; i <= tauntsCount; i++) {
   bot.on(`/a${i+1}e`,function(msg) {
     return bot.sendVoice(msg.chat.id, `./audios/english/${i+1}.opus`);
   }); 
-  bot.on('/help', function(msg){
-    return bot.sendMessage(msg.from.id, 'Bam!');
-    //return msg.reply.text(responses.help);
-  });
- 
+  
 }
+
+bot.on('/taunts', function(msg){
+  return msg.reply.text(responses.taunts);
+});
 
 app.get('/', function(request, response) {
     response.send('aoe bot :D');
