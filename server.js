@@ -23,7 +23,8 @@ for(let i = 0; i <= tauntsCount; i++) {
     return bot.sendVoice(msg.chat.id, `./audios/english/${i+1}.opus`);
   }); 
   bot.on('/help', function(msg){
-    return msg.reply.text(responses.help);
+    return bot.sendMessage(msg.from.id, 'Bam!');
+    //return msg.reply.text(responses.help);
   });
  
 }
